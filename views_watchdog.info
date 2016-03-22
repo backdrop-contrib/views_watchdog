@@ -1,0 +1,10 @@
+
+name = Views Watchdog
+description = Extends the Views module and allows to create custom lists of log entries.
+
+backdrop = 1.x
+package = Views
+type = module
+
+dependencies[] = dblog
+dependencies[] = views

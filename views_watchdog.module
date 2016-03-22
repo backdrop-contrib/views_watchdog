@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Extends the Views module and allows to create custom lists of log entries.
+ */
+
+
+/**
+ * Implements hook_autoload_info().
+ */
+function views_watchdog_autoload_info() {
+
+  return array(
+    'views_handler_field_views_watchdog_message' => 'views/views_handler_field_views_watchdog_message.inc',
+  );
+}
+
+
+/**
+ * Implements hook_views_api().
+ */
+function views_watchdog_views_api() {
+
+  return array(
+    'api' => '3.0',
+    'path' => backdrop_get_path('module', 'views_watchdog') . '/views',
+  );
+}
+
+
+/**
+ * Helper function to retrieve list of types.
+ */
+function views_watchdog_get_type_list() {
+
+  return db_query('SELECT DISTINCT(type) FROM {watchdog} ORDER BY type')
+    ->fetchAllKeyed(0, 0);
+}
+
+
+/**
+ * Helper function to retrieve list of types.
+ */
+function views_watchdog_get_severity_list() {
+
+  return array(
+    WATCHDOG_EMERGENCY => 'emergency',
+    WATCHDOG_ALERT => 'alert',
+    WATCHDOG_CRITICAL => 'critical',
+    WATCHDOG_ERROR => 'error',
+    WATCHDOG_WARNING => 'warning',
+    WATCHDOG_NOTICE => 'notice',
+    WATCHDOG_INFO => 'info',
+    WATCHDOG_DEBUG => 'debug',
+  );
+}
