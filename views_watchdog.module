@@ -13,6 +13,8 @@ function views_watchdog_autoload_info() {
 
   return array(
     'views_handler_field_views_watchdog_message' => 'views/views_handler_field_views_watchdog_message.inc',
+    'views_handler_field_views_watchdog_severity' => 'views/views_handler_field_views_watchdog_severity.inc',
+    'views_handler_field_views_watchdog_type' => 'views/views_handler_field_views_watchdog_type.inc',
   );
 }
 

@@ -66,9 +66,9 @@ function views_watchdog_views_data() {
 
   $data['watchdog']['type'] = array(
     'title' => t('Type'),
-    'help' => t('The of the log entry, for example "user" or "page not found.".'),
+    'help' => t('The type of the log entry, for example "user" or "page not found".'),
     'field' => array(
-      'handler' => 'views_handler_field',
+      'handler' => 'views_handler_field_views_watchdog_type',
       'click sortable' => TRUE,
     ),
     'filter' => array(
@@ -126,7 +126,7 @@ function views_watchdog_views_data() {
     'title' => t('Severity level'),
     'help' => t('The severity level of the event; ranges from 0 (Emergency) to 7 (Debug).'),
     'field' => array(
-      'handler' => 'views_handler_field_machine_name',
+      'handler' => 'views_handler_field_views_watchdog_severity',
       'options callback' => 'views_watchdog_get_severity_list',
       'click sortable' => TRUE,
     ),
