@@ -25,11 +25,10 @@ complete text.
 Current Maintainers
 -------------------
 
-- Ralf Stamm (https://github.com/rstamm)
+Looking for maintainers.
 
 Credits
 -------
 
-- Ported to Backdrop CMS by Ralf Stamm (https://github.com/rstamm).
-
-- Originally written for Drupal by Ralf Stamm (https://github.com/rstamm).
+- Ported to Backdrop CMS by [Ralf Stamm](https://github.com/rstamm).
+- Originally written for Drupal by [Ralf Stamm](https://www.drupal.org/u/rstamm).
